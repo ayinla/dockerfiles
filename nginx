@@ -1,6 +1,7 @@
 MAINTAINER ayinla
 FROM centos:7
 
-RUN yum update -y  && yum install nginx vim -y
-
+RUN yum update -y  && yum install -y epel-release && yum install nginx vim -y && systemctl enable nginx
+EXPOSE 80
+EXPOSE 443
 CMD ["nginx"] 
