@@ -1,0 +1,4 @@
+MAINTAINER ayinla
+FROM centos7
+
+CMD yum update -y  && yum install nginx
